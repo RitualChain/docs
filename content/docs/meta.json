@@ -1,0 +1,10 @@
+{
+    "icon": "Star",
+    "root": true,
+    "pages": [
+        "overview",
+        "landscape",
+        "using-ritual",
+        "architecture"
+    ]
+}

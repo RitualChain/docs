@@ -9,7 +9,7 @@ interface TimelineItem {
   description: string;
   icons: string[];
   pros: string[];
-  cons: string[];
+  cons?: string[];
 }
 
 interface BlockchainTimelineProps {
@@ -29,7 +29,7 @@ export function BlockchainTimeline({ items, className }: BlockchainTimelineProps
           
           <div className="flex flex-col space-y-6">
             {/* Year */}
-            <div className="text-2xl font-bold text-primary">
+            <div className="text-md w-fit px-2 py-1 rounded-lg font-normal text-[#17D184] bg-[#11251B]">
               {item.year}
             </div>
             
@@ -38,19 +38,19 @@ export function BlockchainTimeline({ items, className }: BlockchainTimelineProps
               {item.icons.map((icon, iconIndex) => (
                 <div
                   key={iconIndex}
-                  className="w-fit h-8 rounded-full bg-background flex items-center justify-center overflow-hidden"
+                  className="w-fit lg:h-21 h-18 rounded-xl bg-background flex items-center justify-center overflow-hidden border border-border/20"
                 >
                   <Image
                     src={icon}
                     alt="Timeline Icon"
-                    width={720}
-                    height={720}
-                    className="w-fit h-8 object-cover dark:brightness-90 dark:contrast-110"
+                    width={1800}
+                    height={1200}
+                    className="w-fit lg:h-21 h-16 object-contain dark:brightness-90 dark:contrast-110 scale-84"
                   />
                 </div>
               ))}
             </div>
-            
+
             {/* Title and description */}
             <div className="space-y-3">
               <h3 className="text-2xl font-bold text-foreground">
@@ -60,7 +60,7 @@ export function BlockchainTimeline({ items, className }: BlockchainTimelineProps
                 {item.description}
               </p>
             </div>
-            
+
             {/* Pros and cons box */}
             <div className="border border-border rounded-lg p-6 bg-card/50 backdrop-blur-sm max-w-4xl">
               <div className="space-y-4">
@@ -74,9 +74,9 @@ export function BlockchainTimeline({ items, className }: BlockchainTimelineProps
                     </div>
                   </div>
                 ))}
-                
+
                 {/* Cons */}
-                {item.cons.map((con, conIndex) => (
+                {item.cons?.map((con, conIndex) => (
                   <div key={conIndex} className="flex items-start space-x-3">
                     <div className="text-red-500 font-bold text-lg mt-0.5">−</div>
                     <div className="text-foreground">

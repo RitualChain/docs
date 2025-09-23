@@ -1,5 +1,5 @@
 ---
-title: Ritual in the Blockchain Landscape
+title: Ritual in Blockchain
 description: Understanding Ritual's place in blockchain evolution
 ---
 
@@ -41,35 +41,93 @@ When designing Ritual, we began by examining the history of blockchains to date.
       ]
     },
     {
-      year: "2015",
-      title: "Smart Contract Platforms",
-      description: "Ethereum introduced programmable smart contracts, enabling complex decentralized applications and opening the door to DeFi, NFTs, and more.",
-      icons: ["/assets/smart-contracts.svg"],
+      year: "2014", 
+      title: "Programmable Upstarts",
+      description: "Networks like Ethereum ushered in advanced programmability with Turing-complete virtual machines, and developer-friendly smart contract languages like Solidity.",
+      icons: ["/assets/programmable-upstarts.png"],
       pros: [
-        "Programmable smart contracts enabling complex applications.",
-        "Rich developer ecosystem with comprehensive tooling and documentation.",
-        "Established network effects with widespread adoption and liquidity."
+        "Programmable smart contracts to build early on-chain applications.",
+        "Simple developer experience via Solidity and EVM tooling ecosystem."
       ],
       cons: [
-        "High gas fees during network congestion periods.",
-        "Limited throughput constraining application scalability.",
-        "Energy intensive consensus mechanism affecting sustainability."
+        "Low throughput with strict VM computation constraints.",
+        "Inefficient execution pricing generalizing over unique hardware resources.",
+        "Restrictive state access and growth with high-cost storage operations."
       ]
     },
     {
-      year: "2024",
-      title: "AI-Native Blockchains",
-      description: "Ritual Chain represents the next evolution: purpose-built infrastructure for AI applications with native compute primitives and intelligent contract execution.",
-      icons: ["/assets/ai-native.svg"],
+      year: "2019",
+      title: "\"ETH Killers\"",
+      description: "Following the success of Ethereum, various networks set out to improve the programmable blockchain model by optimizing for throughput and performance.",
+      icons: ["/assets/eth-killers.png"],
       pros: [
-        "Native AI support with built-in compute primitives and model hosting.",
-        "Optimized performance for AI workloads with efficient resource allocation.",
-        "Developer friendly tooling making AI-powered dApps accessible to all builders."
+        "Programmable smart contracts to build early on-chain applications.",
+        "High throughput, commonly via parallel transaction processing.",
       ],
       cons: [
-        "Emerging ecosystem requiring time to build network effects.",
-        "New paradigms requiring developer education and adoption.",
-        "Cutting edge technology with inherent innovation risks."
+        "Difficult DX because of non-traditional VM designs and EVM-familiarity headwinds.",
+        "Segmented ecosystems with fragmented protocols and user bases.",
+        "High validator requirements creating centralization pressures.",
+        "Poor network stability as a function of early high throughput explorations."
+      ]
+    },
+    {
+      year: "2020",
+      title: "Interoperable Networks",
+      description: "In parallel, other networks attempted to service a future populated by many sovereign chains, interoperating through shared communication layers.",
+      icons: ["/assets/interoperable-networks.png"],
+      pros: [
+        "Modular, shared security for quick network bootstrapping.",
+      ],
+      cons: [
+        "Poor cross-chain UX forcing users to segment activity.",
+        "Liquidity fragmentation with separated capital pockets.",
+        "High security risk with network- by-network validator security intricacies.",
+        "High operational complexity for node operators and developers alike."
+      ]
+    },
+    {
+      year: "2021",
+      title: "Layer 2 Networks",
+      description: "As an alternative approach to scaling Ethereum throughput, Layer-2 (L2) networks began to innovate upon the rollup paradigm, building on top of Ethereum security.",
+      icons: ["/assets/l2-networks.png"],
+      pros: [
+        "Low operational complexity for deployment and maintenance ease.",
+        "Familiar experience for existing Ethereum-adjacent users and developers.",
+      ],
+      cons: [
+        "Liquidity fragmentation across L2 network ecosystem.",
+        "Centralization risks via single sequencers and whitelisted state root proposers.",
+        "Inefficient execution pricing with rudimentary MEV environments and inherited Ethereum execution pricing downfalls.",
+      ]
+    },
+    {
+      year: "2023",
+      title: "Modern Scalers",
+      description: "Present-day high-performance L1 and L2 networks focus on scaling through parallel execution, pipelining, and hardware optimization.",
+      icons: ["/assets/modern-scalers.png"],
+      pros: [
+        "High throughput through software and hardware optimization.",
+        "Parallel VM execution to support smart contract scaling.",
+      ],
+      cons: [
+        "Overfit optimization for traditional blockchain workloads.",
+        "High, uniform validator requirements prohibiting average participants, with increased centralization risks.",
+      ]
+    },
+    {
+      year: "2025++",
+      title: "Ritual",
+      description: "Ritual moves beyond scaling existing workloads to fundamentally re-imagine on-chain computation and enrich user functionality.",
+      icons: ["/assets/ritual.png"],
+      pros: [
+        "Native, heterogeneous compute with support for AI Inference, ZK Proving & Verification, TEE execution, and future paradigms via forward-compatible architecture.",
+        "Flexible verification with modular computational primitives.",
+        "Node specialization enabling diverse participants and workload specialization.",
+        "State-of-the-art execution pricing via a novel fee market design: Resonance.",
+      ],
+      cons: [ 
+        "We are still working on it!"
       ]
     }
   ]}

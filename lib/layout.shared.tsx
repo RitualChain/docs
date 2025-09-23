@@ -1,4 +1,5 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import Image from 'next/image';
 
 /**
  * Shared layout configurations
@@ -9,20 +10,12 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
  */
 export function baseOptions(): BaseLayoutProps {
   return {
-    nav: {
+    nav: {  
       title: (
-        <>
-          <svg
-            width="24"
-            height="24"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-label="Logo"
-          >
-            <title>Logo</title>
-            <circle cx={12} cy={12} r={12} fill="currentColor" />
-          </svg>
+        <div className="flex items-center gap-2 text-base font-semibold rounded-md w-full py-1">
+          <Image src="/logo.png" alt="Logo" width={324} height={324} className="size-7 rounded-md"/>
           Ritual Docs
-        </>
+        </div>
       ),
     },
     // see https://fumadocs.dev/docs/ui/navigation/links

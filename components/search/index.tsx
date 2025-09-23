@@ -18,7 +18,7 @@ import { TagsList, TagsListItem } from './search-dialogs';
 
 export default function DefaultSearchDialog(props: SharedProps) {
   const { locale } = useI18n(); // (optional) for i18n
-  const [tag, setTag] = useState<string | undefined>(undefined);
+  const [tag, setTag] = useState<string | undefined>("");
   const { search, setSearch, query } = useDocsSearch({
     type: 'fetch',
     locale,
@@ -43,7 +43,10 @@ export default function DefaultSearchDialog(props: SharedProps) {
           <SearchDialogList items={query.data} />
         )}
         <SearchDialogFooter className="flex flex-row">
-          <TagsList tag={tag} onTagChange={(tag) => setTag(tag)}>
+          <TagsList 
+          tag={tag} 
+          onTagChange={(tag) => setTag(tag)}
+          >
             <TagsListItem value={''}>All</TagsListItem>
             <TagsListItem value="overview">Overview</TagsListItem>
             <TagsListItem value="landscape">Landscape</TagsListItem>

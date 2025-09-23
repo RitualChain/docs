@@ -1,4 +1,4 @@
-import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react"
+import { IconTrendingDown, IconTrendingUp, IconBrain, IconCode, IconUsers, IconRocket } from "@tabler/icons-react"
  
 import { Badge } from "@/components/ui/badge"
 import {
@@ -15,86 +15,86 @@ export function SectionCards() {
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>TVL</CardDescription>
+          <CardDescription>AI Models Deployed</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            $1,250.00
+            2,847
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingUp />
-              +12.5%
+              +24.3%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            TVL <IconTrendingUp className="size-4" />
+            AI Models <IconBrain className="size-4" />
           </div>
           <div className="text-muted-foreground">
-            Snapshot Daily
+            Active on Ritual Chain
           </div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Withdrawals</CardDescription>
+          <CardDescription>Developers</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            1,234
+            15,234
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
-              <IconTrendingDown />
-              -20%
+              <IconTrendingUp />
+              +18.7%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            Withdrawals <IconTrendingDown className="size-4" />
+            Builders <IconCode className="size-4" />
           </div>
           <div className="text-muted-foreground">
-            6M Withdrawals
+            Building on Ritual
           </div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Deposits</CardDescription>
+          <CardDescription>dApps Launched</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            45,678
+            1,456
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingUp />
-              +12.5%
+              +32.1%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            Deposits <IconTrendingUp className="size-4" />
+            Applications <IconRocket className="size-4" />
           </div>
-          <div className="text-muted-foreground">6M Deposits</div>
+          <div className="text-muted-foreground">Live Applications</div>
         </CardFooter>
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>APY</CardDescription>
+          <CardDescription>Network Validators</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            4.5%
+            892
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingUp />
-              +4.5%
+              +8.4%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            APY <IconTrendingUp className="size-4" />
+            Validators <IconUsers className="size-4" />
           </div>
-          <div className="text-muted-foreground">Current APY</div>
+          <div className="text-muted-foreground">Securing the Network</div>
         </CardFooter>
       </Card>
     </div>

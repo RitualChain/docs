@@ -141,9 +141,25 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   text-decoration-color: #17D184;
-  transition: text-decoration-color 0.2s ease;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
 .prose a:hover {
   text-decoration-color: transparent;
+  color: hsl(var(--fd-primary));
+}
+
+/* Link preview styles */
+.link-preview-tooltip {
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Ensure line-clamp works */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

@@ -1,18 +1,131 @@
 ---
 title: Overview
-description: Overview of Ritual Chain
+description: The most expressive blockchain for AI - Build the future of decentralized intelligence
 ---
 
-# Overview
+import { SectionCards } from "@/components/cards/section-cards";
+import { Card } from "fumadocs-ui/components/card";
+import { Callout } from "@/components/fumadocs/callout";
 
-<Card
-    title="What is Ritual?"
-    description="Ritual is the most expressive blockchain in existence, with a single focus: enrich what users can do on-chain today to attract the users of tomorrow."
+<div className="flex flex-col relative overflow-hidden rounded-xl w-full bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 px-6 py-4 mb-6">
+  <div className="relative z-10">
+    <div className="grid grid-cols-1 gap-0 max-fit items-center text-center">
+      <div className="text-3xl font-bold tracking-tight h-18 text-text bg-transparent">
+        Build (*Actually*) Smart Contracts
+      </div>
+      <div className="text-lg text-muted-foreground max-w-full h-24">
+        Ritual Chain is the most expressive blockchain in existence, purpose-built for AI. Ritual empowers developers to create intelligent, responsive applications that bridge the gap between artificial intelligence and decentralized systems.
+      </div>
+      <div className="flex gap-3 w-full mt-2">
+        <Card 
+          className="flex justify-center items-center gap-2 w-1/2 py-2 bg-background text-primary hover:bg-muted/90 transition-colors" 
+          href="/docs/getting-started"
+        >
+          🚀 Get Started
+        </Card>
+        <Card 
+          className="flex justify-center items-center gap-2 w-1/2 py-2 border border-border bg-background text-primary hover:bg-muted transition-colors" 
+          href="/docs/overview/what-is-ritual"
+        >
+          📖 Learn More
+        </Card>
+      </div>
+    </div>
+  </div>
+  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-primary/20 to-transparent rounded-full blur-3xl"></div>
+</div>
+
+## Core Features
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <Card
+    title="🧠 AI-Native Infrastructure"
+    description="Built from the ground up to support AI workloads with native compute primitives, model hosting, and inference capabilities."
     href="/docs/overview/what-is-ritual"
-/>
+  />
+  
+  <Card
+    title="⚡ High Performance"
+    description="Optimized for AI applications with fast transaction processing, efficient resource allocation, and scalable compute."
+    href="/docs/overview/what-is-ritual"
+  />
+  
+  <Card
+    title="🔒 Decentralized Security"
+    description="Trustless AI execution with cryptographic proofs, ensuring your models and data remain secure and verifiable."
+    href="/docs/overview/what-is-ritual"
+  />
+  
+  <Card
+    title="🌐 Developer Friendly"
+    description="Comprehensive tooling, SDKs, and APIs that make building AI-powered dApps as simple as traditional applications."
+    href="/docs/overview/what-is-ritual"
+  />
+</div>
 
-<Card
-    title="Crypto × AI"
-    description="Today’s developers have unprecedented access to AI tools for creating responsive, tailored user experiences. At the same time, maintaining AI systems that are transparent, unbiased, and free from undue control has become more crucial than ever."
-    href="/docs/overview/crypto-x-ai#why-does-ai-need-to-be-on-chain"
-/>
+## Why Ritual?
+
+<Callout type="info" title="The Future of AI is Decentralized">
+Today's developers have unprecedented access to AI tools, but maintaining systems that are transparent, unbiased, and free from centralized control has become crucial. Ritual solves this by bringing AI computation on-chain.
+</Callout>
+{/* 
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
+  <div>
+    ### 🎯 **For Developers**
+    
+    - **Native AI Support**: Deploy and run AI models directly on-chain
+    - **Familiar Tools**: Use existing ML frameworks and libraries
+    - **Scalable Infrastructure**: Auto-scaling compute resources
+    - **Rich Ecosystem**: Access to pre-trained models and datasets
+    
+    [Start Building →](/docs/getting-started)
+  </div>
+  
+  <div>
+    ### 🏢 **For Enterprises**
+    
+    - **Transparent AI**: Auditable and verifiable AI decisions
+    - **Data Sovereignty**: Maintain control over your data
+    - **Compliance Ready**: Built-in governance and regulatory features
+    - **Cost Effective**: Pay-per-use model with no infrastructure overhead
+    
+    [Enterprise Solutions →](/docs/enterprise)
+  </div>
+</div> */}
+
+## Quick Start
+
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+  <Card
+    title="1. Setup"
+    description="Install the Ritual SDK and connect to the network in minutes."
+    href="/docs/overview/what-is-ritual"
+  />
+  
+  <Card
+    title="2. Deploy"
+    description="Upload your AI model and deploy it to the Ritual network."
+    href="/docs/overview/what-is-ritual"
+  />
+  
+  <Card
+    title="3. Scale"
+    description="Let Ritual handle scaling, security, and decentralization."
+    href="/docs/overview/what-is-ritual"
+  />
+</div>
+
+---
+
+<div className="text-center py-2">
+  <h3 className="text-4xl font-semibold mb-2">Ready to build the future?</h3>
+  <p className="text-muted-foreground mb-6 text-xl">Join AI and blockchain developers ready to build on Ritual Chain</p>
+  <div className="flex justify-center gap-4">
+    <Card className="inline-flex items-center gap-2 w-1/2 py-3 text-center justify-center font-semibold text-xl bg-muted text-primary hover:bg-muted/90 transition-colors" href="/docs/getting-started">
+      Start Building Today
+    </Card>
+    <Card className="inline-flex items-center gap-2 w-1/2 py-3 text-center justify-center font-semibold text-xl bg-muted text-primary hover:bg-muted/90 transition-colors" href="/docs/examples">
+      View Examples
+    </Card>
+  </div>
+</div>

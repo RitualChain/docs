@@ -6,7 +6,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from './collapsible';
+} from '@/components/ui/collapsible';
 import { ComponentProps } from 'react';
 import { cn } from '@/lib/cn';
 

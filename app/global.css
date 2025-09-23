@@ -163,3 +163,10 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Fix mobile sidebar spacing */
+@media (max-width: 767px) {
+  #nd-docs-layout {
+    padding-inline-start: 0 !important;
+  }
+}

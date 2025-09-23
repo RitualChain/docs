@@ -44,7 +44,7 @@ export function LayoutBody(props: ComponentProps<'main'>) {
       {...props}
       className={cn(
         'flex flex-1 flex-col transition-[padding] pt-(--fd-nav-height) fd-notebook-layout',
-        !collapsed && 'mx-(--fd-layout-offset)',
+        !collapsed && 'max-md:mx-0 md:mx-(--fd-layout-offset)',
         props.className,
       )}
       style={{

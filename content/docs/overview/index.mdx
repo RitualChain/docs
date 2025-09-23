@@ -6,16 +6,24 @@ description: The most expressive blockchain for AI - Build the future of decentr
 import { SectionCards } from "@/components/cards/section-cards";
 import { Card } from "fumadocs-ui/components/card";
 import { Callout } from "@/components/fumadocs/callout";
+import { ImageZoom } from '@/components/fumadocs/image-zoom';
 
 <div className="flex flex-col relative overflow-hidden rounded-xl w-full bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 px-6 py-4 mb-6">
   <div className="relative z-10">
     <div className="grid grid-cols-1 gap-0 max-fit items-center text-center">
-      <div className="text-3xl font-bold tracking-tight h-18 text-text bg-transparent">
+      <div className="text-2xl xl:text-3xl font-bold tracking-tight h-12 xl:h-18 text-text bg-transparent">
         Build (*Actually*) Smart Contracts
       </div>
-      <div className="text-lg text-muted-foreground max-w-full h-24">
-        Ritual Chain is the most expressive blockchain in existence, purpose-built for AI. Ritual empowers developers to create intelligent, responsive applications that bridge the gap between artificial intelligence and decentralized systems.
+      <div className="hidden md:block md:text-sm lg:text-base text-muted-foreground max-w-full h-12 xl:h-16">
+        Ritual is the most expressive blockchain in existence, purpose-built for AI. 
+        Ritual empowers builders to create intelligent, responsive dApps that bridge the gap between AI and decentralized systems.
       </div>
+
+    </div>
+  </div>
+  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-primary/20 to-transparent rounded-full blur-3xl"></div>
+<ImageZoom
+src="/assets/ritual-banner.png" alt="Ritual Banner" height={2400} width={2400} className="w-full max-w-full mx-auto" />
       <div className="flex gap-3 w-full mt-2">
         <Card 
           className="flex justify-center items-center gap-2 w-1/2 py-2 bg-background text-primary hover:bg-muted/90 transition-colors" 
@@ -30,9 +38,6 @@ import { Callout } from "@/components/fumadocs/callout";
           📖 Learn More
         </Card>
       </div>
-    </div>
-  </div>
-  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-primary/20 to-transparent rounded-full blur-3xl"></div>
 </div>
 
 ## Core Features
@@ -117,14 +122,21 @@ Today's developers have unprecedented access to AI tools, but maintaining system
 
 ---
 
-<div className="text-center py-2">
-  <h3 className="text-4xl font-semibold mb-2">Ready to build the future?</h3>
-  <p className="text-muted-foreground mb-6 text-xl">Join AI and blockchain developers ready to build on Ritual Chain</p>
+<div className="text-center py-2 bg-muted px-4 rounded-xl">
+  <ImageZoom
+    src="/assets/ritual-developers.png"
+    alt="Ritual Banner"
+    height={2400}
+    width={2400}
+    className="w-full h-84 max-h-96 object-cover rounded-xl mx-auto justify-center items-center"
+  />
+  <h3 className="text-2xl md:text-4xl font-semibold md:mb-2">Ready to build the future?</h3>
+  <p className="text-muted-foreground mb-6 text-sm md:text-xl">Join AI and blockchain developers ready to build on Ritual Chain</p>
   <div className="flex justify-center gap-4">
-    <Card className="inline-flex items-center gap-2 w-1/2 py-3 text-center justify-center font-semibold text-xl bg-muted text-primary hover:bg-muted/90 transition-colors" href="/docs/getting-started">
+    <Card className="inline-flex items-center gap-2 w-1/2 py-3 text-center justify-center font-semibold text-xl bg-background text-primary hover:bg-muted/90 transition-colors" href="/docs/getting-started">
       Start Building Today
     </Card>
-    <Card className="inline-flex items-center gap-2 w-1/2 py-3 text-center justify-center font-semibold text-xl bg-muted text-primary hover:bg-muted/90 transition-colors" href="/docs/examples">
+    <Card className="inline-flex items-center gap-2 w-1/2 py-3 text-center justify-center font-semibold text-xl bg-background text-primary hover:bg-muted/90 transition-colors" href="/docs/examples">
       View Examples
     </Card>
   </div>

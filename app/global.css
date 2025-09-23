@@ -168,5 +168,38 @@
 @media (max-width: 767px) {
   #nd-docs-layout {
     padding-inline-start: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Fix docs body content */
+  .fd-notebook-layout {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure mobile sidebar doesn't affect layout */
+  #nd-sidebar {
+    display: none !important;
+  }
+  
+  /* Mobile navbar adjustments */
+  #nd-subnav {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Fix any container padding issues */
+  .container, .max-w-screen-xl, .mx-auto {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }

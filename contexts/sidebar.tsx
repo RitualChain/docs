@@ -5,6 +5,7 @@ import {
   useMemo,
   useRef,
   useState,
+  useEffect,
 } from 'react';
 import { createContext, usePathname } from 'fumadocs-core/framework';
 import { useOnChange } from 'fumadocs-core/utils/use-on-change';
@@ -34,9 +35,29 @@ export function SidebarProvider({
 }): ReactNode {
   const closeOnRedirect = useRef(true);
   const [open, setOpen] = useState(false);
-  const [collapsed, setCollapsed] = useState(false);
+  // Default sidebar to collapsed on mobile, expanded on desktop
+  const [collapsed, setCollapsed] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768;
+    }
+    return false; // Default for SSR
+  });
 
   const pathname = usePathname();
+
+  // Handle responsive behavior
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 768;
+      if (isMobile) {
+        setCollapsed(true);
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useOnChange(pathname, () => {
     if (closeOnRedirect.current) {

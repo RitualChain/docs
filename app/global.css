@@ -120,3 +120,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Resizable sidebar styles */
+:root {
+  --fd-sidebar-width: 264px;
+}
+
+.resizing {
+  user-select: none;
+  /* cursor: col-resize; */
+}
+
+.resizing * {
+  pointer-events: none;
+}

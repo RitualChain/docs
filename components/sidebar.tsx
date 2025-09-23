@@ -34,6 +34,8 @@ import { useTreeContext, useTreePath } from 'fumadocs-ui/contexts/tree';
 import { useMediaQuery } from 'fumadocs-core/utils/use-media-query';
 import { Presence } from '@radix-ui/react-presence';
 import { Button } from './ui/button';
+import { useResizableSidebar } from '../hooks/use-resizable-sidebar';
+import { ResizeHandle } from './resize-handle';
 
 export interface SidebarProps {
   /**
@@ -114,6 +116,17 @@ export function SidebarContent(props: ComponentProps<'aside'>) {
   const [hover, setHover] = useState(false);
   const timerRef = useRef(0);
   const closeTimeRef = useRef(0);
+  
+  const { 
+    width, 
+    isResizing, 
+    sidebarRef, 
+    startResizing 
+  } = useResizableSidebar({
+    minWidth: 224,
+    maxWidth: 480,
+    defaultWidth: 264,
+  });
 
   useOnChange(collapsed, () => {
     setHover(false);
@@ -123,10 +136,12 @@ export function SidebarContent(props: ComponentProps<'aside'>) {
   return (
     <aside
       id="nd-sidebar"
+      ref={sidebarRef}
       {...props}
       data-collapsed={collapsed}
       className={cn(
-        'fixed left-0 rtl:left-auto rtl:right-(--removed-body-scroll-bar-size,0) flex flex-col items-end top-(--fd-sidebar-top) bottom-(--fd-sidebar-margin) z-20 bg-fd-card text-sm border-e transition-[top,opacity,translate,width] duration-200 max-md:hidden *:w-(--fd-sidebar-width)',
+        'fixed left-0 rtl:left-auto rtl:right-(--removed-body-scroll-bar-size,0) flex flex-col items-end top-(--fd-sidebar-top) bottom-(--fd-sidebar-margin) z-20 bg-fd-card text-sm border-e transition-[top,opacity,translate] duration-200 max-md:hidden *:w-(--fd-sidebar-width)',
+        !isResizing && 'transition-[width]',
         collapsed && [
           'rounded-xl border translate-x-(--fd-sidebar-offset) rtl:-translate-x-(--fd-sidebar-offset)',
           hover ? 'z-50 shadow-lg' : 'opacity-0',
@@ -172,6 +187,12 @@ export function SidebarContent(props: ComponentProps<'aside'>) {
       }}
     >
       {props.children}
+      {!collapsed && (
+        <ResizeHandle 
+          onMouseDown={startResizing}
+          isResizing={isResizing}
+        />
+      )}
     </aside>
   );
 }

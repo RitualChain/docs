@@ -65,6 +65,7 @@ import {
   getSidebarTabs,
   type GetSidebarTabsOptions,
 } from 'fumadocs-ui/utils/get-sidebar-tabs';
+import { SidebarWidthInitializer } from '../../sidebar-width-initializer';
 
 export interface DocsLayoutProps extends BaseLayoutProps {
   tree: PageTree.Root;
@@ -278,9 +279,7 @@ export function DocsLayout(props: DocsLayoutProps) {
             </LanguageToggle>
           ) : null}
           {themeSwitch.enabled !== false &&
-            (themeSwitch.component ?? (
-              <ThemeToggle mode={themeSwitch.mode ?? 'light-dark-system'} />
-            ))}
+            (themeSwitch.component ?? <ThemeToggle />)}
           {footer}
         </HideIfEmpty>
       </SidebarContentMobile>
@@ -299,10 +298,11 @@ export function DocsLayout(props: DocsLayoutProps) {
   return (
     <TreeContextProvider tree={props.tree}>
       <NavProvider transparentMode={transparentMode}>
+        <SidebarWidthInitializer />
         <LayoutBody
           {...props.containerProps}
           className={cn(
-            'md:[--fd-sidebar-width:286px] xl:[--fd-toc-width:286px]',
+            'xl:[--fd-toc-width:264px]',
             props.containerProps?.className,
           )}
         >
@@ -445,9 +445,7 @@ function DocsNavbar({
               </LanguageToggle>
             ) : null}
             {themeSwitch.enabled !== false &&
-              (themeSwitch.component ?? (
-                <ThemeToggle mode={themeSwitch.mode ?? 'light-dark-system'} />
-              ))}
+              (themeSwitch.component ?? <ThemeToggle />)}
             {sidebarCollapsible && navMode === 'top' && (
               <SidebarCollapseTrigger
                 className={cn(

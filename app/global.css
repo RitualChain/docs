@@ -134,3 +134,16 @@
 .resizing * {
   pointer-events: none;
 }
+
+/* Custom underline style for links */
+.prose a {
+  text-decoration: no-underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: #17D184;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.prose a:hover {
+  text-decoration-color: transparent;
+}

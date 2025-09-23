@@ -51,6 +51,16 @@ export function ImageZoom({
         <Image
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 900px"
           {...props}
+          style={{
+            borderRadius: '12px',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            background: 'rgba(0, 0, 0, 0.02)',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+            transition: 'all 0.2s ease',
+            cursor: 'zoom-in',
+            ...props.style,
+          }}
+          className={`hover:shadow-lg hover:scale-[1.02] transition-all duration-200 ${props.className || ''}`}
         />
       )}
     </Zoom>

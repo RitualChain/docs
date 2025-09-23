@@ -1,14 +1,76 @@
 ---
 title: Ritual in the Blockchain Landscape
-description: Understanding Ritual’s place in blockchain evolution
+description: Understanding Ritual's place in blockchain evolution
 ---
+
+import { BlockchainTimeline } from "@/components/timeline/blockchain-timeline";
 
 # Ritual in the Blockchain Landscape
 
-Understanding Ritual’s place in blockchain evolution
+Understanding Ritual's place in blockchain evolution
 
 When designing Ritual, we began by examining the history of blockchains to date. Many architectural innovations underpinning Ritual are informed by past work from historic blockchain networks, modified to support the next-generation use cases of tomorrow.
-
-
-
-
+<BlockchainTimeline 
+  items={[
+    {
+      year: "2009",
+      title: "Early Titans",
+      description: "Networks like Bitcoin pioneered the first decentralized, digital currencies, enabling peer-to-peer transactions without intermediaries.",
+      icons: ["/assets/early-titans.png"],
+      pros: [
+        "Robust decentralization powered by proof-of-work consensus."
+      ],
+      cons: [
+        "Basic scripting system preventing any smart applications.",
+        "Low throughput with long block times and prohibitive block size.",
+        "Rigid governance prohibiting feature upgrades to improve developer experience."
+      ]
+    },
+    {
+      year: "2012",
+      title: "Payment Networks",
+      description: "Early payment networks optimized for high-throughput token payments, frequently at the expense of decentralization.",
+      icons: ["/assets/payment-networks.png"],
+      pros: [
+        "High throughput, optimized for payments."
+      ],
+      cons: [
+        "Limited programmability to favor optimizing for just payment use cases.",
+        "Quorum centralization risks due to selected consensus mechanisms.",
+        "Poor developer experience because of early, complex smart contract environments."
+      ]
+    },
+    {
+      year: "2015",
+      title: "Smart Contract Platforms",
+      description: "Ethereum introduced programmable smart contracts, enabling complex decentralized applications and opening the door to DeFi, NFTs, and more.",
+      icons: ["/assets/smart-contracts.svg"],
+      pros: [
+        "Programmable smart contracts enabling complex applications.",
+        "Rich developer ecosystem with comprehensive tooling and documentation.",
+        "Established network effects with widespread adoption and liquidity."
+      ],
+      cons: [
+        "High gas fees during network congestion periods.",
+        "Limited throughput constraining application scalability.",
+        "Energy intensive consensus mechanism affecting sustainability."
+      ]
+    },
+    {
+      year: "2024",
+      title: "AI-Native Blockchains",
+      description: "Ritual Chain represents the next evolution: purpose-built infrastructure for AI applications with native compute primitives and intelligent contract execution.",
+      icons: ["/assets/ai-native.svg"],
+      pros: [
+        "Native AI support with built-in compute primitives and model hosting.",
+        "Optimized performance for AI workloads with efficient resource allocation.",
+        "Developer friendly tooling making AI-powered dApps accessible to all builders."
+      ],
+      cons: [
+        "Emerging ecosystem requiring time to build network effects.",
+        "New paradigms requiring developer education and adoption.",
+        "Cutting edge technology with inherent innovation risks."
+      ]
+    }
+  ]}
+/>

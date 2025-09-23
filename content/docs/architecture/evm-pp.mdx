@@ -9,3 +9,12 @@ import { ImageZoom } from '@/components/fumadocs/image-zoom';
 EVM++ is a backwards-compatible extension of the [Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm) with expressive compute precompiles to build actually smart contracts, with native scheduling, built-in account abstraction, and the most wanted EIPs.
 
 <ImageZoom src="/assets/evm-pp.svg" alt="EVM++" height={500} width={500} />
+
+Core components
+​
+Native scheduling
+
+We introduce a new predeploy contract, dubbed Scheduler that enables developers to register a callback frequency at which their smart contract entry point is invoked.
+Block producers maintain a mapping of pending invocations and may include these transactions at the top of each block, subject to transaction validity and sufficient fees.
+For heterogeneous or compute-intensive scheduled transactions, Resonance ensures timely allocation and inclusion in a state-preserving manner.
+

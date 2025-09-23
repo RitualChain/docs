@@ -1,5 +1,5 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import Image from 'next/image';
+import { ThemeLogo } from '@/components/ui/theme-logo';
 
 /**
  * Shared layout configurations
@@ -13,8 +13,8 @@ export function baseOptions(): BaseLayoutProps {
     nav: {  
       title: (
         <div className="flex items-center gap-2 text-base font-semibold rounded-md w-full py-1">
-          <Image src="/logo.png" alt="Logo" width={324} height={324} className="size-7 rounded-md"/>
-          Ritual Docs
+          <ThemeLogo width={1800} height={1200} className="rounded-md w-fit h-fit" />
+          {/* Ritual Docs */}
         </div>
       ),
     },
